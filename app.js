@@ -31,6 +31,8 @@ function loadData(Input) {
         .then(data => {
             displayData(data)
         })
+        .catch(error => displayError('Something Went Wrong 😵!! Please Try After Sometime'));
+
 }
 const displayData = data => {
     data.meals.forEach(element => {
@@ -87,4 +89,8 @@ const displayMealDetails = (mealDetails) => {
             resultHolder.appendChild(div);
         });
     resultHolder.innerHTML = null;
+}
+const displayError = error => {
+    const errorTag = document.getElementById('error-messages');
+    errorTag.innerText = error;
 }

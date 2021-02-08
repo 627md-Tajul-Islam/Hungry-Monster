@@ -18,6 +18,11 @@ body {
     border-width: 0;
 }
 
+#Result img {
+    height: 400px;
+    width: 400px;
+}
+
 #Result {
     display: none;
     width: 1000px;
